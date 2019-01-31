@@ -21,3 +21,11 @@ The last one can only give better results, but it's more complicated to implemen
 Since only three variables are concerned with the missing values, I will decide what amount of effort to put in NA imputation according to those variables importance for the prediction. If the variables have a low predictive effect, I won't use a fancy way of imputing.
 
 *Note to myself*: I should put a warning when the input contains missing values, or values in a different datatype/range. Then, give a choice: go back and change the value, or continue knowing the value will be imputed.
+
+---
+## Day 2
+Thursday 31st January
+
+Did the univariate analysis for both numeric and categorical variables:
+- numeric: the capital variables have a lot of 0: more than 95%! They might not be useful at all for the prediction, to be determine.
+- categorical: some categories have very few observations. I might group categories together.
