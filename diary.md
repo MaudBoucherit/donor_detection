@@ -29,3 +29,12 @@ Thursday 31st January
 Did the univariate analysis for both numeric and categorical variables:
 - numeric: the capital variables have a lot of 0: more than 95%! They might not be useful at all for the prediction, to be determine.
 - categorical: some categories have very few observations. I might group categories together.
+
+---
+## Day 3
+Friday 1st February
+
+Correlation day!
+1. KS-tests for all numeric variables with the response
+2. probability comparison between the two classes for all the categorical variables (creation of a continent variable)
+3. Some correlation measurement for all possible covariate duo to identify possible correlations. Keep only the significant one as a warning of multi-multicollinearity
