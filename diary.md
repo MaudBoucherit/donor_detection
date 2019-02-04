@@ -38,3 +38,22 @@ Correlation day!
 1. KS-tests for all numeric variables with the response
 2. probability comparison between the two classes for all the categorical variables (creation of a continent variable)
 3. Some correlation measurement for all possible covariate duo to identify possible correlations. Keep only the significant one as a warning of multi-multicollinearity
+
+---
+## Day 4-5
+Saturday and Sunday, 2nd-3rd February
+
+I had trouble installing a Python module, then decided to create a ubuntu VM to do the rest of my analysis. Couldn't work on the project as I was setting-up my new environment.
+
+---
+## Day 6
+Monday 4th February
+
+I really have to get on moving...  
+Today: modelling in R, writing of the insight report and creation of a pipeline predicting the class of a new observation.
+
+- Fit a logistic regression and a simple decision tree on the variables to get a first idea of features importance. 
+- Gather main results on the data in a report presenting clearly what is in the data and how the variables are influencing each others.
+- Fit a more complex data with a good prediction accuracy for the detection of new potential donors.
+- Create a pipeline taking as input a new line and output a prediction (I have to incorporate this inside the dashboard later) - with also data type check and missing values impute.
+
