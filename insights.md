@@ -1,12 +1,12 @@
 # Data Insights
 
-This is a report presenting some interesting facts about the data. 
+This report presents some interesting facts about the data. 
 
-I am only describing the training data, as it's the one I will use to fit my model later. Moreover, the test dataset has similar distribution of its variables so most of the facts stated below are true for the test set too.
+I am only describing the training data, as it's the one I will use to fit my model later. Moreover, the test dataset has a similar distribution of its variables, so most of the facts stated below are correct for the test set too.
 
 
 ## Variable Description
-In this first part, I am describing each variable's distribution, using some basic statistics and distribution plots. I am also looking at the direct effect of each covariate on the response variable: whether a respondent have more than $50k. I am using statistcal tests to measure the difference in distribution between the "<=50k" class and the ">50k" class.
+In this first part, I am describing each variable's distribution, using some basic statistics and distribution plots. I am also looking at the direct effect of each covariate on the response variable: whether a respondent has more than $50k. I am using statistical tests to measure the difference in distribution between the "<=50k" class and the ">50k" class.
 
 
 #### Age
@@ -18,15 +18,15 @@ min:  17        max:  90
 
 Let's describe the distribution for **age**:
 - The youngest respondents are 17 years old (`min`), and the oldest are 90 years old (`max`). The range is 73 years.  
-- On average, the respondents are 38.6 yo (`mean`) and the standard deviation is 13.4 years (`std`).
-- 25% of the respondent are less or equal to 28 yo, and 25% are more or equal to 47 yo.
-- In particular, half of the respondents are younger than 37 yo. 
+- On average, the respondents are 38.6 yo (`mean`), and the standard deviation is 13.4 years (`std`).
+- 25% of the respondents are less or equal to 28 yo, and 25% are more or equal to 47 yo.
+- In particular, half of the respondents are younger than 37 years old. 
 
 ![](img/age.png)
 
-We can see on the density plot that the respondents are mainly distributed between 17 and 60 years old. Most of the respondents are quite young, but the older people have a far greater age than average, creating asymetry.
+We can see on the density plot that the respondents are mainly distributed between 17 and 60 years old. Most of the respondents are quite young, but the older people have greater age than average, creating asymmetry.
 
-The age distribution of people in the ">50k" class is significantly higher than for the "<=50k". In particular, the age peaks at around 40 yo for the higher class, and at around 25 yo for the lower class. 
+The age distribution of people in the ">50k" class is significantly higher than for the "<=50k". In particular, the age peaks at around 40 yo for the higher class, and around 25 yo for the lower class. 
 
 
 #### Capital Gain & Loss
@@ -42,11 +42,11 @@ min:  0         max:  4356
 25%:  0         50%:  0         75%:  0
 ```
 
-More than 75% of the respondents have not declared any capital gain nor loss. However, there are still people who declared big amounts of capital: the maximum values are really high, 99,999 USD for capital gain, and 4,356 USD for capital loss. The means are high because of those unusual values and I would advise again using the mean for those variables as it is not robust.
+More than 75% of the respondents have not declared any capital gain or loss. However, there are still people who declared big amounts of capital: the maximum values are high, 99,999 USD for capital gain, and 4,356 USD for capital loss. The means are high because of those great values, and I would advise again using the mean for those variables as it is not robust.
 
 ![](img/capital-gain.png) ![](img/capital-loss.png)
 
-We can clearly see on the density plot that most of the respondents have not declared any capital gain nor loss. In fact, more than 91% of the respondents have not declare capital gain, and 95% have not declared capital loss. On the other end, 0.5% have declared the maximum value of capital gain, $99,999, which explains the bump around that value on the density.
+We can see on the density plot that most of the respondents have not declared any capital gain or loss. More than 91% of the respondents have not declared a capital gain, and 95% have not declared a capital loss. On the other end, 0.5% have declared the maximum value of capital gain, $99,999, which explains the bump around that value on the density.
 
 For both variables, the distributions for "<=50k" are more dense around 0 than the ones for "<50k", and has less density on the upper tail.
 
@@ -62,28 +62,28 @@ The lowest value you can declare seems to be 1 hour, and the highest value is 99
 
 ![](img/hours-per-week.png)
 
-We can see on the density plot that the respondents are mainly distributed between 30 and 55 hours a week, with a very high density at 40 hours. The slope between 0 and 20 shows that there are quite a lot of people working few hours a week, most likely part-timers. On the other side, the slope decreases quickly, showing that very few people works a lot of hours.
+We can see on the density plot that the respondents are mainly distributed between 30 and 55 hours a week, with a very high density at 40 hours. The slope between 0 and 20 shows that there are quite a lot of people working a few hours a week, most likely part-timers. On the other side, the slope decreases quickly, showing that very few people work many hours.
 
 The distribution for hours-per-week of people in the ">50k" class is significantly higher than for the "<=50k":
-- the lower values (between 1 and 20 hours) are more declared by people from the lower class, 
-- the upper values (between 60 and 99 hours) are more declared by people from the upper class.  
+- the lower values (between 1 and 20 hours) are more often declared by people from the lower class, 
+- the upper values (between 60 and 99 hours) are more often declared by people from the upper class.  
 
 
 #### Workclass
 ![](img/workclass.png)
 
-Most of the respondents are working in the **private sector**. People working for the private sector represent: 77% of the "<=50k" class, and 65% of the ">50k" class. The others categories over-representing the class "<=50k" are "Never-worked" and "Without-pay", but both have very few respondents. 
+Most of the respondents are working in the **private sector**. People working for the private sector represent 77% of the "<=50k" class and 65% of the ">50k" class. The other categories over-representing the class "<=50k" are "Never-worked" and "Without-pay," but both have very few respondents. 
 
-The other categories have all less than 10% of the respondents. People in those categories are more likely to be in the ">50k" class than average. In particular, the "self-employed-inc" workclass represents 8% of the ">50k" class but only 2% of the "<=50k" class.
+The other categories have less than 10% of the respondents each. People in those categories are more likely to be in the ">50k" class than average. In particular, the "self-employed-inc" work class represents 8% of the ">50k" class but only 2% of the "<=50k" class.
 
 
 #### Education
 ![](img/education.png)
 
 The most represented education level is "HS-grad" with more than 30% of the respondents, followed by "Some-college" (22%) and "Bachelors" (16%).  
-The lowest levels of education have very few respondents: 509 for 5th and 6th gardes, 247 for 1st to 4th grades, and only 83 for Preschool. 
+The lowest levels of education have very few respondents: 509 for 5th and 6th grades, 247 for 1st to 4th grades, and only 83 for Preschool. 
 
-People who never finished high school (grade 12th and under), HS grads, and college students are more present in the class "<=50k". In particular, HS grads represent more than 36% of the "<=50k" but only 22% of the ">50k". The difference is even greater for lower level of education.
+People who never finished high school (grade 12th and under), HS grads, and college students are more present in the class "<=50k". In particular, HS grads represent more than 36% of the "<=50k" but only 22% of the ">50k". The difference is even higher for the lower levels of education.
 
 People who graduated from university are more likely to be in the ">50k" class than average. For example, the Bachelors represents 28% of the ">50k" class but only 13% of the "<=50k" class. For the Masters, it's 12% of the ">50k" and only 3% of the "<=50k".
 
@@ -91,17 +91,17 @@ People who graduated from university are more likely to be in the ">50k" class t
 #### Marital Status
 ![](img/marital-status.png)
 
-The main category is "Married - Civilian" with more than 45% of the respondents, followed by "Never married" (33%). The least used category is "Married - Armed Forces" with only 37 respondents.
+The main category is *Married - Civilian* with more than 45% of the respondents, followed by *Never married* (33%). The least used category is "Married - Armed Forces" with only 37 respondents.
 
 Never married people are more likely to be in the "<=50k" class than average. They represent more than 40% of the "<=50k" class but only 7% of the ">50k" class.  
-Married people (civilian and AF) are more present in the class ">50k". In particular, they represent 85% of the ">50k" but only 34% of the "<=50k".
+Married people - civilian and AF - are more present in the class ">50k". In particular, they represent 85% of the ">50k" but only 34% of the "<=50k".
 
 
 #### Occupation
 ![](img/occupation.png)
 
-The most-represented occupations are "Prof-specialty", "Craft-repair" and "Executive Managerial", each with a little more than 12% of the respondents.  
-The least represented occupations are "Armed Forces" and "Private House Services", with both less than 1% of respondents.
+The most-represented occupations are *Prof-specialty*, *Craft-repair* and *Executive Managerial*, each with a little more than 12% of the respondents.  
+The least represented occupations are *Armed Forces* and *Private House Services*, with both less than 1% of respondents.
 
 Farmers, fishers, cleaners and other service are more likely to be in the "<=50k" class than average. For example, cleaners represent more than 5% of the "<=50k" class but less than 1% of the ">50k" class.  
 Executive managers, professional specialists and salesmen are more present in the class ">50k". In particular, executive managers represent 26% of the ">50k" but only 9% of the "<=50k".
@@ -118,7 +118,7 @@ Executive managers, professional specialists and salesmen are more present in th
 |  Other               |  0.3%   |  Other               |  0.9%   |
 
 
-The most-represented race is "White", with 85% of the respondents.  
+The most-represented race is *White*, with 85% of the respondents.  
 The least-represented are Amer-Indians and Eskimos with less than 1%. Nearly 1% of the respondents are from minorities that don't have their own category.
 
 Black people and Amer-Indians are more likely to be in the "<=50k" class than average. For example, Black people represent 11% of the "<=50k" class but less than 5% of the ">50k" class.  
@@ -131,10 +131,10 @@ White people are a little more present in the class ">50k". They represent more 
 |  Male            |  85.2%  |  Male            |  61.7%  |
 |  Female          |  14.8%  |  Female          |  38.3%  |
 
-Overall, 67% of the respondents are men and 33% are women.
+Overall, 67% of the respondents are men, and 33% are women.
 
 Women are more likely to be in the "<=50k" class than average. They represent 38% of the "<=50k" class but less than 15% of the ">50k" class.  
-Men are more present in the class ">50k". They represent more than 85% of the ">50k"but only 62% of the "<=50k".
+Men are more in the class ">50k". They represent more than 85% of the ">50k" but only 62% of the "<=50k".
 
 
 #### Native Country
@@ -159,9 +159,9 @@ On the other hand, people born in North America, Europe or Asia are slightly mor
 
 
 ## Overview of Class Detection
-The goal is to explain the earning class ("<=50k" and ">50k") by the other variables. For this, I am fitting some very simple models on the full set to observe what variable explains the classification the most. 
+The goal is to explain the earning class ("<=50k" and ">50k") by the other variables. For this, I fit some simple models on the full set to observe what variable explains the classification the most. 
 
-Like for native countries, categorical variables have too many categories. I've grouped some categories together so that the interpretation is easier.
+Like for native countries, categorical variables have too many categories. To make the interpretation more straightforward, I've grouped some categories.
 
 ### Logistic Regression
 The logistic regression looks at the effect of each variable on the earning class. The effect is measured by a coefficient and a p-value for each numeric variable and each category of categorical variables. If the coefficient is positive, it means that people in this category are more likely to earn more. The effect is said significant if the p-value is low.
@@ -219,47 +219,41 @@ Residual deviance: 19844  on 30118  degrees of freedom
 AIC: 19930
 ```
 
-All the variables have an overall significant effect on the prediction of the earning class. The variables with the most overall effect on the class detection are "capital-gain", "occupation" and "education". On the other hand, "race" and "sex" have a significant effect on the class detection, but way smaller than for the other variables.
+All the variables have an overall significant effect on the prediction of the earning class. The variables with the most overall effect on the class detection are **capital-gain**, **occupation** and **education**. On the other hand, **race** and **sex** have a significant effect on the class detection, but way smaller than for the other variables.
 
 *Capital Gain* has a significant positive effect on the class. It means that between two people with the same profile, the person that gained more capital is more likely to earn >50k than the person with less capital gain.
 
-*Occupation* effect is measured by reference to "adm-clerical". "Other-service" are significantly the least likely to earn >50k, with a coefficient of -0.9. "Executive-managerial" are significantly the most likely to earn >50k with a coefficient of 0.8. 
+*Occupation* effect is measured by reference to *adm-clerical*. *Other-service* are significantly the least likely to earn >50k, with a coefficient of -0.9. *Executive-managerial* are significantly the most likely to earn >50k with a coefficient of 0.8. 
 
-*Education* effect is measured by reference to "before-4th", people that did go further than 4th grade. "before-4th" are the least likely to earn >50k. "Doctorate-Prof-school" are significantly more likely to earn >50k with a coefficient of 3.6. We notice that the coefficients of two consecutive categories are quite close, meaning that the effect is not significantly different between the two. However, between the lowest and the highest categories, the effect is more than significantly different.
+*Education* effect is measured by reference to *before-4th*, people that did go further than 4th grade. *before-4th* are the least likely to earn >50k. *Doctorate-Prof-school* are significantly more likely to earn >50k with a coefficient of 3.6. We notice that the coefficients of the two following categories are quite close, meaning that the effect is not significantly different between the two. However, between the lowest and the highest categories, the effect is more than significantly different.
 
 The *age* has a significant, positive effect on the class (p-value < 2e-16). It means that between two people with the same profile, but different age, the older is more likely to earn >50k than the younger.
 
-*Workclass* effect is measured compared to the reference group "Federal government". All the other categories have a negative effect on the earning class, meaning that Federal-government is the most likely to earn more. The least likely to earn >50k is the Unemployed class (never-worked and without-pay) with a coefficient of -10. All the coefficients are significant, except the "Unemployed" class since its size is small.
+*Workclass* effect is measured compared to the reference group *Federal government*. All the other categories have a negative effect on the earning class, meaning that Federal-government is the most likely to earn more. The least likely to earn >50k is the Unemployed class (never-worked and without-pay) with a coefficient of -10. All the coefficients are significant, except for the *Unemployed* class since its size is small.
 
-*Marital Status* effect is measured by reference to "Divorced". "Never-married" are significantly the least likely to earn >50k, with a coefficient of -0.4. "Married" (civilian and AF) are significantly the most likely to earn >50k with a coefficient of 2.3. We notice that "Separated" and "Widowed-Spouse-absent" have small effect, not significantly different from divorced.
+*Marital Status* effect is measured by reference to *Divorced*. *Never-married* are significantly the least likely to earn >50k, with a coefficient of -0.4. *Married* (civilian and AF) are significantly the most likely to earn >50k with a coefficient of 2.3. We notice that *Separated* and *Widowed-Spouse-absent* have a small effect, not significantly different from the divorced category.
 
 
 ### Decision Tree
 The regression is great to get the effect of each variable on the class detection. With a decision tree, we can identify criteria to split the data into groups labelled "<=50k" or ">50k". 
 
-|  variable        |  importance  |
-|-----------------:|--------------|
-|  marital.status  |  2440        |
-|  relationship    |  2418        |
-|  age             |  1301        |
-|  educ            |  1242        |
-|  capital.gain    |  1222        |
-|  occupation      |  904         |
-|  sex             |  839         |
-|  hours.per.week  |  765         |
-|  capital.loss    |  417         |
-|  workclass       |  240         |
-|  race            |  82          |
-|  native.country  |  65          |
+|  variable        |  importance  |  |  variable        |  importance  |
+|-----------------:|--------------|--|-----------------:|--------------|
+|  marital.status  |  2440        |  |  sex             |  839         |
+|  relationship    |  2418        |  |  hours.per.week  |  765         |
+|  age             |  1301        |  |  capital.loss    |  417         |
+|  educ            |  1242        |  |  workclass       |  240         |
+|  capital.gain    |  1222        |  |  race            |  82          |
+|  occupation      |  904         |  |  native.country  |  65          |
 
-While building the decision tree, the algorithm gives each variable an importance according to how much it helps split the data into the classes. For the tree, the most important variables are relationship and marital status. Race and native country are the least important. 
+While building the decision tree, the algorithm gives each variable its importance according to how much it helps to split the data into the classes. For the tree, the most important variables are *relationship* and *marital status*. Race and native country are the least important. 
 
-As the tree grows deeper, and becomes more complex, the error rate decreases. The minimum error we can acheive with one simple tree on this data is 58%. Below is the tree cut at an error rate of around 60%. The dark green nodes are mainly people earning less than 50k, and the dark blue ones are people earning more than 50k.
+The error rate decreases while the tree grows more in-depth and becomes more complex. The minimum error we can achieve with one simple tree on this data is 58%. Below is the tree cut at an error rate of around 60%. The dark green nodes are mainly people earning less than 50k, and the dark blue ones are people earning more than 50k.
 
 ![](img/decision-tree.png)
 
-The first split is between people in a Married relation ship (Wife and Husband) and the others. 
-- Left: 55% of the respondents; among them, 93% earning <=50k, and 7% earning >50k
+The first split is between people in a Married relationship (Wife and Husband) and the others. 
+- Left: 55% of the respondents; among them, 93% earning <=50k, and 7% earning >50k,
 - Right: 45% of the respondents; among them, 55% earning <=50k, and 45% earning >50k.
 
 The second and final split on the left tree is "Capital Gain < $7,074".   
@@ -269,9 +263,9 @@ In the end, the two most useful groups are:
 - **1st Leaf** - People not in a married relationship and with a capital gain lower than 7k: 
     - they represent 54% of all respondents,
     - among them, 95% are earning less than 50k a year.  
-**=>** It's a strong indicator of people that should not be detected by the model as potential donors.
+**=>** It's a reliable indicator of people that should not be detected by the model as potential donors.
 - **Last Leaf** - People in a married relationship and who graduated from university (Bachelors, Masters, Doctorate or Prof-school):
     - they represent 14% of all respondents,
     - among them, 72% are earning more than 50k a year.  
-**=>** It's a strong indicator of people that could be detected by the model as potential donors.
+**=>** It's a reliable indicator of people that could be detected by the model as potential donors.
 
