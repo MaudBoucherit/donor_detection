@@ -50,10 +50,22 @@ I had trouble installing a Python module, then decided to create a ubuntu VM to 
 Monday 4th February
 
 I really have to get on moving...  
-Today: modelling in R, writing of the insight report and creation of a pipeline predicting the class of a new observation.
+Today: modelling in R, writing of the insight report.
 
 - Fit a logistic regression and a simple decision tree on the variables to get a first idea of features importance. 
 - Gather main results on the data in a report presenting clearly what is in the data and how the variables are influencing each others.
 - Fit a more complex data with a good prediction accuracy for the detection of new potential donors.
-- Create a pipeline taking as input a new line and output a prediction (I have to incorporate this inside the dashboard later) - with also data type check and missing values impute.
+
+---
+## Day 7
+Tuesday 5th February
+
+Today: do as much as I can until I am too tired of it
+- Clean model notebook, compare three different Random Forest with cross-validation, train and save the best one.
+- Create an Rshiny app to impute data.
+- Write a script cleaning and imputing the input data from the Rshiny (no JSON for now).
+- Include loading model and prediction to the app.
+- Complete README with description of each notebook and link to the deployed shiny app.
+- Update proposal to match what I did and what I'd like to do.
+
 
