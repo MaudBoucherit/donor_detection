@@ -7,3 +7,4 @@ Logistic regression: https://datascienceplus.com/perform-logistic-regression-in-
 Model comparision: https://stats.stackexchange.com/questions/69664/comparing-nested-glms-via-chi-squared-and-loglikelihood  
 Decision tree: https://blog.revolutionanalytics.com/2013/06/plotting-classification-and-regression-trees-with-plotrpart.html  
 
+R documentation, Shiny documentation, stack-overflow
