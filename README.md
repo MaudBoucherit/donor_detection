@@ -13,9 +13,9 @@ With this application, you can enter information about a person and the applicat
 I've produced a report containing insights about the data used to train the model. It contains some simple statistics about the variables' distribution and some more advanced analysis of which variable is linked to the annual salary the most.  
 You can find this report in [insights](insights.md).  
 
-For a more detailed analysis of the data, you can look at the notebooks [data_insights](data_insights.ipynb) and [eda_model](eda_model.ipynb).
+For a more detailed analysis of the data, you can look at the notebooks [data_insights](notebooks/data_insights.ipynb) and [eda_model](notebooks/eda_model.ipynb).
 
-You can also find an explanation of how I selected the main model in the [model_detection](model_detection.ipynb) notebook.
+You can also find an explanation of how I selected the main model in the [model_detection](notebooks/model_detection.ipynb) notebook.
 
 ## Dependencies
 To actually run the notebook, you'll need to install Python3 and R.  
